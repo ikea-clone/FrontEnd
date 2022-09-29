@@ -3,3 +3,38 @@
     width : 310px;
     height : 27px;
 }
+
+.sibutton {
+    width : 310px;
+    height : 27px;
+    margin-top: 20px;
+    background-color: #1AB394;
+    color : white;
+    border-width: 0;
+    border-radius: 3px;
+    cursor : pointer;
+}
+
+.sname {
+    width : 300px;
+    height : 25px;
+    color : gray;
+    margin-top : 20px;
+    padding : 5px 5px;
+}
+
+.semail {
+    width : 300px;
+    height : 25px;
+    color : gray;
+    margin-top : 20px;
+    padding : 5px 5px;
+}
+
+.spassword {
+    width : 300px;
+    height : 25px;
+    color : gray;
+    margin-top : 20px;
+    padding : 5px 5px;
+}

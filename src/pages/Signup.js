@@ -1,11 +1,24 @@
 import React, {useState} from 'react';
 import './Signup.css';
 import Cup from "../img/cup.png";
+import Clayful from 'Clayful/client-js';
 
 const Signup = () => {
-    let [na, setna] = useState('');
-    let [id, setId] = useState('');
-    let [pw, setPw] = useState('');
+    const [Nickname, setNickname] = useState('');
+    let [Email, setEmail] = useState('');
+    let [Password, setPassword] = useState('');
+
+    const onNicknameHandler = (event) => {
+        setNickname(event.currentTarget.value);
+    }
+
+    const onEmailHandler = (event) => {
+        setEmail(event.currentTarget.value);
+    }
+
+    const onPasswordHandler = (event) => {
+        setPassword(event.currentTarget.value);
+    }
 
     return (
         <div>
@@ -14,22 +27,26 @@ const Signup = () => {
                 <input
                     placeholder="닉네임"
                     id="na"
-                    className="name"
+                    className="sname"
+                    onChange={onNicknameHandler}
                 />
                 <br/>
                 <input
                     placeholder="이메일"
                     id="id"
-                    className="email"
+                    className="semail"
+                    onChange={onEmailHandler}
                 />
                 <br/>
                 <input
+                    type="password"
                     placeholder="비밀번호"
                     id="pw"
-                    className="password"
+                    className="spassword"
+                    onChange={onPasswordHandler}
                 />
                 <br/>
-                <button>하이</button>
+                <button className="sibutton">회원가입</button>
             </div>
         </div>
     );
