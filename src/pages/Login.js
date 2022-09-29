@@ -1,16 +1,27 @@
 import React, {useState} from 'react';
 import './Login.css';
 import Cup from "../img/cup.png";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const Login = () => {
-    let [id, setId] = useState('');
+    let realp = '1234';
+    let realemail = '1234@1234.com';
+    const nav = useNavigate();
+    let [email, setEmail] = useState('');
     let [pw, setPw] = useState('');
-
-    function handleClick(e) {
-        window.location.replace("s")
+    const handlelogin = () => {
+        if(pw == realp && email == realemail){
+            alert('로그인에 성공하셨습니다.');
+            nav('/');
+        }
+        else 
+            alert('로그인에 실패했습니다.\n아이디/비밀번호를 확인해주세요.');
     }
-
+    const entercheck = (e) => {
+        if(e.key == 'Enter'){
+            handlelogin();
+        } 
+    }
     return (
         <div className="background">
             <img className='cup' src={Cup}/>
@@ -31,6 +42,9 @@ const Login = () => {
                         placeholder="이메일"
                         id="id"
                         className="ilogin"
+                        onChange={(e) => {
+                            setEmail(e.target.value);
+                        }}
                     />
                 </div>
                 <div className="password">
@@ -39,9 +53,13 @@ const Login = () => {
                         placeholder="비밀번호"
                         id="password"
                         className="ilogin"
+                        onChange={(e) => {
+                            setPw(e.target.value);
+                        }}
+                        onKeyPress={entercheck}
                     />
                 </div>
-                <button className="loginbn">
+                <button className="loginbn" onClick={handlelogin}>
                     <text>로그인</text>
                 </button>
                 <br />
