@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './Signup.css';
 import Cup from "../img/cup.png";
-import Clayful from 'Clayful/client-js';
 
 const Signup = () => {
     const [Nickname, setNickname] = useState('');
@@ -21,8 +20,7 @@ const Signup = () => {
     }
 
     return (
-        <div>
-            <img className='cup' src={Cup}/>
+        <div className='sign'>
             <div className="signin">
                 <input
                     placeholder="닉네임"
