@@ -5,7 +5,7 @@ import {Link, useNavigate} from "react-router-dom";
 
 const Login = () => {
     let realp = '1234';
-    let realemail = '1234@1234.com';
+    let realemail = '202110407@bssm.hs.kr';
     const nav = useNavigate();
     let [email, setEmail] = useState('');
     let [pw, setPw] = useState('');
@@ -14,13 +14,13 @@ const Login = () => {
             alert('로그인에 성공하셨습니다.');
             nav('/');
         }
-        else 
+        else
             alert('로그인에 실패했습니다.\n아이디/비밀번호를 확인해주세요.');
     }
     const entercheck = (e) => {
         if(e.key == 'Enter'){
             handlelogin();
-        } 
+        }
     }
     return (
         <div className="background">
@@ -59,9 +59,11 @@ const Login = () => {
                         onKeyPress={entercheck}
                     />
                 </div>
-                <button className="loginbn" onClick={handlelogin}>
-                    <text>로그인</text>
-                </button>
+                <Link to = "/Logined">
+                    <button className="loginbn" onClick={handlelogin}>
+                        <text>로그인</text>
+                    </button>
+                </Link>
                 <br />
                 <Link to = "/Signup">
                     <button className="account">
