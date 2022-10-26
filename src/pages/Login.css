@@ -1,0 +1,51 @@
+.cup {
+    height : 150px;
+    width : 150px;
+    display : block;
+    margin : auto;
+    margin-top : 100px;
+}
+
+.say {
+    text-align: center;
+    font-size: 15px;
+    color : gray;
+}
+
+.title {
+    text-align: center;
+}
+
+.ilogin {
+    width : 300px;
+    height : 25px;
+    color : gray;
+    margin-top : 20px;
+    padding : 5px 5px;
+}
+
+.put {
+    text-align: center;
+}
+
+.loginbn {
+    width : 310px;
+    height : 27px;
+    margin-top: 20px;
+    background-color: #1AB394;
+    color : white;
+    border-width: 0;
+    border-radius: 3px;
+    cursor : pointer;
+}
+
+.account {
+    width : 310px;
+    height : 27px;
+    margin-top : 20px;
+    border-color: gray;
+    border-radius: 3px;
+    border-width: 0.3px;
+    cursor : pointer;
+}
+
